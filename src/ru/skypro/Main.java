@@ -48,14 +48,8 @@ public class Main {
     }
 
     public static int countDuplicates(List<String> quote) {
-        int count = 0;
-        Iterator<String> iterator = quote.iterator();
-        while (iterator.hasNext()) {
-            String next = iterator.next();
-            if (quote.get(0).equals(next)) {
-                count++;
-            }
-        }
+        Set<String> uniqueWords = new HashSet<>(quote);
+        int count = quote.size() - uniqueWords.size();
         return count;
     }
 }
