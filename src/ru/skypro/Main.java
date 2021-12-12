@@ -25,8 +25,6 @@ public class Main {
 
     public static List getUniqueEvenNums(List<Integer> nums) {
         Set<Integer> set = new LinkedHashSet<>(nums);
-        nums.clear();
-        nums.addAll(set);
         List<Integer> evenNums = new ArrayList<>();
         for (int i = 0; i < nums.size(); i++) {
             if (nums.get(i) % 2 == 0) {
@@ -38,8 +36,6 @@ public class Main {
 
     public static List getUniqueWords(List<String> quote) {
         Set<String> set = new LinkedHashSet<>(quote);
-        quote.clear();
-        quote.addAll(set);
         List<String> newQuote = new ArrayList<>();
         for (int i = 0; i < quote.size(); i++) {
             newQuote.add(quote.get(i));
